@@ -1,0 +1,48 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+
+namespace program1
+{
+    class Obj
+    {
+        public string Id { get; set; }
+        
+    }
+    class Program
+    {
+        
+        static void Main(string[] args)
+         {
+            string z = "  ";
+            int e = 0;
+            string c;
+            
+            c = Console.ReadLine();
+            List <string> a= new List<string> { };
+            while (true)
+            {
+                if (!String.IsNullOrEmpty(z))
+                {
+                    z = Console.ReadLine();
+                    a.Add(z);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            foreach(string i in  a)
+            {
+                e++;
+                if (i==c)
+                {
+                    Console.WriteLine(e+" "+c);
+                }
+            }
+            Console.ReadKey();
+        }
+
+    }
+
+}
