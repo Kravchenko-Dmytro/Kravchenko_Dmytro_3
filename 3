@@ -1,0 +1,48 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
+
+namespace program1
+{
+
+    class Program
+    {
+
+        static void Main(string[] args)
+
+        {
+            int y = 0;
+            string z = " ";
+            List<int> a = new List<int> { };
+            while (true)
+            {
+                if (!String.IsNullOrEmpty(z))
+                {
+                    try
+                    {
+                        z = Console.ReadLine();
+                        y = Convert.ToInt32(z);
+                        a.Add(y);
+                    }
+                    catch { }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            var c = from b in a
+                    where b > 0
+                    select b;
+            foreach (int x in c)
+            {
+                Console.Write(x+" ");
+            }
+        }
+
+    }
+
+   
+}
